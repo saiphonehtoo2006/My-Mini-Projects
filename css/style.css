@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -5,6 +7,97 @@ body{
 
 *{
     box-sizing:border-box;
+     font-family: "Oswald", sans-serif;
+}
+
+header{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 15px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header .logo a span{
+    color: #cd0f22;
+}
+
+header .logo a{
+    font-size: 30px;
+    text-decoration: none;
+    color: Black;
+    font-weight: 700;
+}
+header .nav{
+    position: fixed;
+    background-color: #cd0f22;
+    width: 280px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index:99;
+    padding: 100px 0px 15px;
+}
+
+header .nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header .nav ul li{
+    display: block;
+}
+
+header .nav ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    color: whitesmoke;
+    display: block;
+    position: relative;
+    padding: 9px 30px;
+}
+
+header .nav ul li a::before{
+    content:'';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    height: 85%;
+    background-color: #0f0f0f;
+    opacity: 0.5;
+    transition: width .2s ease;
+    z-index: -1;
+}
+
+header .nav ul li a:hover::before{
+    width:100%;
+}
+
+header .ham-burger{
+    display:inline-block;
+    position: relative;
+    z-index: 101;
+}
+
+header .ham-burger span{
+    height: 3px;
+    margin-bottom: 8px;
+    display: block;
+    background-color:whitesmoke;
+    width: 30px;
 }
 
 .container{
@@ -15,7 +108,7 @@ body{
 
 .home {
     height: 100vh;
-    background-image: url('../images/m0.2.png');
+    background-image: url('../images/Athlete1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
